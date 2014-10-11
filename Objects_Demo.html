@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<style>
+p {
+   color: yellow;
+   background-color: blue;
+}
+</style>
+
+<body>
+
+<p id="demo"></p>
+
+<script>
+// Everything in Javascript in an object. There are a couple
+// of ways of declaring them. Here I demonstrate two ways */
+// This way uses the keyword new, which is classic in PHP, C++, and other classical
+// inheritance languages. However, there are some differences in they way JS uses
+// Prototypal inheritance
+
+// Object #1 
+var person = new Object();
+person.firstName = "Brad";
+person.lastName = "Beiermann";
+person.age = 22;
+person.eyeColor = "blue";
+
+// Object #2
+var person2 = {
+firstName: "John",
+lastName: "Doe",
+age: 25,
+eyeColor: "brown" 
+}; 
+
+// Object #3
+// Sometimes we like to have an "object type" that can be used to create many objects of one 
+// type. The standard way to create an "object type" is to use an object constructor 
+// function:
+function person3(first, last, age, eyecolor) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eyecolor;
+}
+var myFather = new person3("John", "Doe", 50, "blue");
+var myMother = new person3("Sally", "Rally", 48, "green");
+
+document.getElementById("demo").innerHTML =
+"Objects 1 and 2 say " + person.firstName + " has " + person.eyeColor + " eyes and is " + person.age + " years old. Also, " + person2.firstName + " from Object 2 has " + person2.eyeColor + " eyes. " +  "Object3 says my father " + myFather.firstName + " is " + myFather.age + " years old and my mother is " + myMother.firstName + " is " + myMother.age + " years old.";
+</script>
+
+</body>
+</html>
