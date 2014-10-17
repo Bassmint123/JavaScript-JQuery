@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>The getDay() function returns the weekday as a number:</p>
+
+<p id="demo"></p>
+
+<script>
+var d = new Date();
+var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+document.getElementById("demo").innerHTML = week[d.getDay()];
+</script>
+
+</body>
+</html>
