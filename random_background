@@ -1,0 +1,10 @@
+<script type="text/javascript">
+
+/* This script generates a random background image
+each time a page is loaded.
+*/
+
+var randombgs=["../clip/backgr4.jpg", "../clip/backgr17.jpg", "../clip/backgr13.jpg"]
+
+document.body.style.background='white url('+Math.floor(Math.random()*randombgs.length)]+')')
+</script>
