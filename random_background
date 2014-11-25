@@ -1,7 +1,7 @@
 <script type="text/javascript">
 
 /* This script generates a random background image
-each time a page is loaded.
+each time a page is loaded by the user.
 */
 
 var randombgs=["../clip/backgr4.jpg", "../clip/backgr17.jpg", "../clip/backgr13.jpg"]
