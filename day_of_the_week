@@ -7,6 +7,7 @@
 <p id="demo"></p>
 
 <script>
+// Gets the day of the week
 var d = new Date();
 var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 document.getElementById("demo").innerHTML = week[d.getDay()];
