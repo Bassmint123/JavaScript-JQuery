@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<p>The best way to loop through an array is using a standard for loop like this:</p>
+<p>Perhaps the best way to loop through an array is using a standard for loop like this:</p>
 
 <button onclick="myFunction()">Try it</button>
 
