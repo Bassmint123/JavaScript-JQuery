@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+<form method="post" action="http://www.cimstratcorp.com">
+<br>
+ <label for="username">Create a username:</label>
+ <input type="text" id="username" />
+ <div id="feedback"></div>
+<br> 
+ <label for="password">Create a password: </label>
+ <input type="password" id="password" />
+ 
+ <input type="submit" value="Sign up!" />
+ </form>
+
+<script>
+function checkUsername(minLength) {
+ elMsg.style.fontSize = "16px";
+ elMsg.style.color = "red";
+   if (elUsername.value.length < minLength) {
+      elMsg.textContent = 'Username must be ' + minLength + ' characters or more.';
+	}  
+   else {
+      elMsg.textContent = '';   
+   }
+}
+
+var elMsg = document.getElementById('feedback');
+var elUsername = document.getElementById('username');
+elUsername.addEventListener('blur', function(){checkUsername(6)}, false);
+</script>
+
+</body>
+</html>
