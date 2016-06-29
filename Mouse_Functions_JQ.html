@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#p1").mousedown(function(){
+       $("#box").css("width", "400px");
+       $("#box").css("height", "200px");
+       $("#box").css("background-color", "yellow");
+    });
+   $("#p2").dblclick(function(){
+        $(this).hide();
+    });
+
+});
+</script>
+</head>
+<body>
+<div id="box">
+<p id="p1">Click this paragraph to turn a 400px x 200px box yellow.</p>
+<p id="p2">Double click this to hide.</p>
+</div>
+
+</body>
+</html>
