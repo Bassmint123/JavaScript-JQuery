@@ -16,7 +16,6 @@ p {
 // This way uses the keyword new, which is classic in PHP, C++, and other classical
 // inheritance languages. However, there are some differences in they way JS uses
 // Prototypal inheritance
-
 // Object #1 is an Object Constructor
 var person = new Object();
 person.firstName = "Brad";
@@ -24,15 +23,20 @@ person.lastName = "Beiermann";
 // Using alternate notation here too
 person['age'] = 22;
 person['eyeColor'] = "blue";
+person.personalInfo = function() {
+   return this.firstName + " " + this.lastName;
+ }
 
 // Object #2 is Literal Notation
 var person2 = {
 firstName: "John",
 lastName: "Doe",
 age: 25,
-eyeColor: "brown" 
+eyeColor: "brown",
+personalInfo: function() {
+   return this.firstName + " " + this.lastName;
+ }
 }; 
-
 // Object #3 is a Object Constructor Function
 // Sometimes we like to have an "object type" that can be used to create many objects of one 
 // type. The standard way to create an "object type" is to use an object constructor 
@@ -42,15 +46,18 @@ function Person3(first, last, age, eyecolor) {
     this.lastName = last;
     this.age = age;
     this.eyeColor = eyecolor;
+	this.personalInfo = function() {
+	   return this.firstName + " " + this.lastName;
+	}
 }
 var myFather = new Person3("John", "Doe", 50, "blue");
 var myMother = new Person3("Sally", "Rally", 48, "green");
-
-var msg = "Objects 1 and 2 say " + person.firstName + " has " + person.eyeColor + " eyes and is " + person.age + " years old. Also, "; 
+var msg = "Objects 1 and 2 say " + person.firstName + " has " + person.eyeColor + " eyes and is " + person.age + " years old. <br> Also, "; 
 msg += person2.firstName + " from Object 2 has " + person2.eyeColor + " eyes. ";
 msg += "Object3 says my father " + myFather.firstName + " is " + myFather.age + " years old and my mother is ";
-msg += myMother.firstName + " is " + myMother.age + " years old.";
-var el = document.getElementById("demo")
+msg += myMother.firstName + " is " + myMother.age + " years old. <br> The person function is this: " + person.personalInfo() + " <br>The person2 function is this: " + person2.personalInfo();
+msg += " <br>The person3 function is this: " + myMother.personalInfo();
+var el = document.getElementById("demo");
 el.innerHTML = msg;
 </script>
 
