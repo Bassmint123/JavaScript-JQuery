@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+
+<script>
+// Declare the array 
+var carslength, text;
+var cars = [
+    "Saab",
+    "Volvo",
+    "BMW",
+    "Ford"
+];
+// Insert element in the array 
+cars[2] = "Tesla";
+
+// Loop to create the list element
+carslength = cars.length;
+text = "<ul>";
+for (i = 0; i < carslength; i++) {
+    text += "<li>" + cars[i] + "</li>";
+}
+text += "</ul>";
+
+// Check the type casting cars is
+var casting1 = typeof cars;
+
+// Check if cars is an array
+var casting2 = Array.isArray(cars);
+if(casting2 == true) {
+   casting2 = "Oh yes!";
+}
+var msg = cars + text + "Cars is an: " + casting1 + "<br>Is cars an array? " + casting2; 
+document.getElementById("demo").innerHTML = msg;
+
+</script>
+
+</body>
+</html>
+
