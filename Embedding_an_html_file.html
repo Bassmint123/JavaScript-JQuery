@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <meta charset="utf-8"/> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script>
+    /* This section of code is being used to embed an HTML file called Part B
+     It can be used for embedding fixed portions of websites such as header, footer,...etc.
+     There are TWO ways of doing this as shown in Method 1 and Method 2.
+
+	 NOTE: This will need to be run in IIS localhost (or a web server) for browsers like Chrome due to
+	       the cross scripting request in this method. However, this does run in Firefox to a degree. Although
+		   it will not pull a CSS file if included.
+	 */
+$(document).ready(function(){
+	$(function(){
+      // Method #1
+	  $("#includedContent").load("Embedding_PartB.html");
+	  
+	  // Method #2: Allows multiple files to be used and drops the div id="includedContent" 
+	  //$("div").appendTo('body').load("Embedding_PartB.html");
+    });
+});
+    </script> 
+  </head> 
+
+  <body> 
+     <p class="first">This is File A</p>
+     <!-- Method 1 --> 
+	 <div id="includedContent"></div> 
+	 
+	 
+	 <!-- Method 2
+	 <div></div>
+	 -->
+  </body> 
+</html>
