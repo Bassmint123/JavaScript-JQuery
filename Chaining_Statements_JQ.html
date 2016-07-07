@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+// This code snipet is an example of a chained statement.
+$(document).ready(function(){
+    $("button").click(function(){
+        // This is the chained statement
+        $("#p1").css("color", "blue").slideUp(1000).slideDown(1000);
+		
+		/*
+		Otherwise, the code would look like this line-by-line
+		$("#p1").css("color", "blue");
+		$("#p1").slideUp(1000);
+		$("#p1").slideDown(1000);
+		*/
+    });
+});
+</script>
+</head>
+<body>
+
+<p id="p1">Chained jQuery is fun!!</p>
+
+<button>Click me</button>
+
+</body>
+</html>
