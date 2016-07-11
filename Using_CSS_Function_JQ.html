@@ -4,14 +4,19 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-    // Using the CSS function in JQuery to overide an element's style
-    $("p").css({"background-color":"blue", "color":"yellow"});
+    $("p").on({
+        click: function(){
+            $(this).html("<div>This is a new box.</div>");
+            $(this).css({"margin-top":"20%", "margin-left":"10%", "width":"50%", "height":"200px", "background-color":"yellow"});
+        }  
+        
+    });
 });
 </script>
 </head>
 <body>
 
-<p style="background-color:yellow;">This is a paragraph.</p>
+<p>Click or move the mouse pointer over this paragraph.</p>
 
 </body>
 </html>
