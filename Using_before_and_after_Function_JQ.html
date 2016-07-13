@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+function afterText() {
+    var txt1 = "jQuery is ";                   // Create element with HTML
+    var txt2 = $("<i></i>").text("certainly ");    // Create with jQuery approach
+    var txt3 = $("<span></span>").text("the most ");
+    var txt4 = document.createElement("b");   // Create with DOM approach
+    txt4.innerHTML = "Coolest!";
+    $("h1").after(txt1, txt2, txt3, txt4);      // Insert new elements after h1
+    $("h1").before("<b>Think about it...</b>");  // Insert new elements before h1
+}
+</script>
+</head>
+<body>
+
+<h1>Let's insert something after this title</h1>
+
+<p>Click the button to insert text after the image.</p>
+
+<button onclick="afterText()">Insert after</button>
+
+</body>
+</html>
