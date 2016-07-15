@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#stuff").click(function(){
+        $("p").hide("slow", function(){
+            alert("The paragraph is now hidden");
+        });
+    });
+});
+</script>
+</head>
+<body>
+
+<div id="stuff"><b>Hey, click here to hide the stuff below. This will demo a "callback".</b></div>
+<p>This is a paragraph with little content.</p>
+
+</body>
+</html>
