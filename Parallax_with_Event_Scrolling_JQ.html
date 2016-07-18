@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-3.1.0.min.js"></script>
+<script>
+var i = 0; 
+var j = 0;
+$(document).ready(function(){
+   // Scroll animations
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 50) {
+           // This will limit the animation to one time.
+        while (i < 1) {
+              $("#test1").animate({right: '-=150'}, 1000);
+              i++;
+           }
+        }
+
+        if ($(this).scrollTop() > 450) {
+           // This will limit the animation to one time.
+        while (j < 1) {
+              $("#test2").animate({right: '-=150'}, 1000);
+              j++;
+           }
+        }  
+      }); // window scroll
+    });  // doc ready
+</script>
+<style>
+body, html {
+    height: 100%;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url('marbles-background.jpg');
+
+    /* Full height */
+    height: 50%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 {
+    /* The image used */
+    background-image: url('stats-background.jpg');
+
+    /* Full height */
+    height: 50%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#test1 {
+   position: relative;
+}
+
+#test2 {
+   position: relative;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="parallax"></div>
+
+<div style="height:500px;background-color:red;font-size:26px">
+
+Scroll Up and Down this page to see the parallax scrolling effect.
+<div id="test1" style="color:yellow;">
+This div moves when scrolled.
+</div>
+Tip: Try to remove the background-attachment property to remove the scrolling effect.
+</div>
+
+<div class="parallax2"></div>
+
+<div style="height:500px;background-color:yellow;font-size:26px">
+Scroll Up and Down this page to see the parallax scrolling effect.
+<div id="test2" style="color:red;">
+This div moves when scrolled.
+</div>
+Tip: Try to remove the background-attachment property to remove the scrolling effect.
+</div>
+<div class="parallax"></div>
+</body>
+</html>
