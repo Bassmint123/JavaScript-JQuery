@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script>
+var x="&nbsp";
+$(document).ready(function(){
+   $("#one").click(function(){
+       x = x + "1";
+       $("textarea").html(x);
+     });
+   $("#two").click(function(){
+       x = x + "2";
+       $("textarea").html(x);
+     });
+   $("#three").click(function(){
+     x = x + "3";
+       $("textarea").html(x);
+     });
+   $("#clr").click(function(){
+     $('textarea').html('');
+     x="&nbsp";
+     });
+   
+});
+</script>
+</head>
+<body>
+<div style="margin-left: 2%;margin-top: 2%;">
+<textarea name="message" rows="1" cols="30">calculator</textarea>
+<br>
+<br>
+<button id="one" type="button" class="btn btn-info">1</button>
+<button id="two" type="button" class="btn btn-info">2</button>
+<button id="three" type="button" class="btn btn-info">3</button>
+<button id="clr" type="button" class="btn btn-info">C</button>
+</div>
+
+</body>
+</html>
+
