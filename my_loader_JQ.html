@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<title>Example of JQuery Loader</title>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+// Wait for window load
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
+
+</script>
+
+<style>
+/* Paste this css to the style sheet file or under head tag */
+/* This only works with JavaScript, if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('http://sampsonresume.com/labs/pIkfp.gif') center no-repeat #fff;
+
+</style>
+
+</head>
+
+<body>
+<h1>This is a home page</h1>
+           
+<div class="se-pre-con"></div>
+
+<p>Just showing some text here</p>
+
+</body>
+
+</html>
