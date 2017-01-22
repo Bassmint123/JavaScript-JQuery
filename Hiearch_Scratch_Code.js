@@ -1,3 +1,4 @@
+// Walking through some scratch here
 var myObject = {
    “first”: “Brad”,
    “last”: “Beiermann”,
