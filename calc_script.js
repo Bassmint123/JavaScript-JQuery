@@ -1,3 +1,4 @@
+// Calc code
 var round = function(text, pos) {
     function setCharAt(str,index,chr) {
        if(index > str.length-1) return str;
